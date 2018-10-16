@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_main_top"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+            <EditText
+                android:id="@+id/action_bar_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="55dp"
+                android:paddingLeft="40dp"
+                android:textColor="@color/color_white"
+                android:background="@drawable/edit_rect_search_bg"
+                android:hint="按名称、主治、用法用量搜索"
+                android:textCursorDrawable="@drawable/shape_search_eidt_cursor_color"
+                android:textColorHint="#6bd7cd"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:maxLines="1" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/edit_search1"
+                android:layout_gravity="center_vertical"/>
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/actionButton2"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/actionButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:text="下一步"
+            android:textColor="@color/color_white"
+            android:textSize="15dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_diliver" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/ripple_material_dark">
+    <item>
+        <selector>
+            <item android:state_pressed="false">
+                <layer-list>
+                    <item>
+                        <shape>
+                            <solid android:color="#00ffffff" />
+                        </shape>
+                    </item>
+                    <item>
+                        <bitmap
+                            android:gravity="center"
+                            android:src="@drawable/screen_folk" />
+                    </item>
+                </layer-list>
+            </item>
+            <item android:state_pressed="true">
+                <layer-list>
+                    <item>
+                        <shape>
+                            <solid android:color="@color/split_line_gray" />
+                        </shape>
+                    </item>
+                    <item>
+                        <bitmap
+                            android:gravity="center"
+                            android:src="@drawable/screen_folk" />
+                    </item>
+                </layer-list>
+            </item>
+            <item>
+                <layer-list>
+                    <item>
+                        <shape>
+                            <solid android:color="#00ffffff" />
+                        </shape>
+                    </item>
+                    <item>
+                        <bitmap
+                            android:gravity="center"
+                            android:src="@drawable/screen_folk" />
+                    </item>
+                </layer-list>
+            </item>
+        </selector>
+    </item>
+</ripple>

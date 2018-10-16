@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:background="#ffffff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/commend_user"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:text="用户评论"
+        android:textColor="#253231"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/userCommentAll"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/commend_more"
+        android:gravity="center_vertical"
+        android:text="全部评论"
+        android:textColor="#a4a4a4"
+        android:textSize="14sp" />
+
+    <View
+        style="@style/line_diliver"
+        android:layout_below="@+id/userCommentAll"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/userCommentPrescriptionRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userCommentAll" />
+
+    <TextView
+        android:id="@+id/bottomAllComment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/userCommentPrescriptionRv"
+        android:gravity="center"
+        android:text="查看全部评论"
+        android:textColor="#03b5a6"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/bottomAllComment"
+        android:background="#EFEFEF" />
+</RelativeLayout>

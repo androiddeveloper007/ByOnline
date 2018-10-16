@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_below="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        >
+
+        <com.bowen.commonlib.widget.CircleImageView
+            android:id="@+id/mDoctorHeadPortraitImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/man" />
+
+        <TextView
+            android:id="@+id/mDoctorNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@+id/mDoctorHeadPortraitImg"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:maxWidth="80dp"
+            android:ellipsize="end"
+            android:text=""
+            android:textColor="@color/color_main_black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/mDoctorDepartmentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@+id/mDoctorNameTv"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:maxWidth="80dp"
+            android:ellipsize="end"
+            android:text=""
+            android:textColor="@color/color_main_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mDoctorRankTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doctorCommentAll"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@+id/mDoctorDepartmentTv"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:maxWidth="80dp"
+            android:ellipsize="end"
+            android:text=""
+            android:textColor="@color/color_main_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mDoctorClinicTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mDoctorNameTv"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/mDoctorHeadPortraitImg"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="#253231"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutTop"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="17dp"
+            android:gravity="center_vertical"
+            android:text="日程安排"
+            android:textColor="#a4a4a4"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/mLastWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/mNextWeek"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center_vertical"
+            android:text="上一周"
+            android:textColor="@color/color_main"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/mNextWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="17dp"
+            android:gravity="center_vertical"
+            android:text="下一周"
+            android:textColor="@color/color_main"
+            android:textSize="17sp" />
+
+        <com.bowen.tcm.common.widget.ReservationView
+            android:id="@+id/mReservationView"
+            android:layout_below="@+id/mNextWeek"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">博医在线</string>
+    <string name="app_name_debug">博医在线(测试版)</string>
+    <string name="__leak_canary_display_activity_label">博医在线内存泄漏助手</string>
+    <string name="umeng_appkey">5aaf62718f4a9d47ed00005a</string>
+    <string name="umeng_debug_appkey">5b2b6396a40fa32fdd00002a</string>
+    <string name="gaode_api_key">5431ccaabc2e7102db78e89c85617ac3</string>
+    <string name="sharesdk_appkey">24b6e1b679b11</string>
+    <string name="sharesdk_appsecret">e7cae87b7b4508b743de586445d073d7</string>
+    <string name="title_activity_regist">RegistActivity</string>
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="prescription_detail_info">* 本平台只作为信息展示平台，并不保证该配方的疗效和用药安全。服用该偏方前请咨询医师</string>
+</resources>

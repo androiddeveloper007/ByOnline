@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="298dp"
+    android:layout_height="124dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    app:cardUseCompatPadding="false">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_4">
+
+        <com.bowen.commonlib.widget.CircleImageView
+            android:id="@+id/mDoctorHeadPortraitImg"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/man" />
+
+        <TextView
+            android:id="@+id/mDoctorNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@+id/mDoctorHeadPortraitImg"
+            android:gravity="center_vertical"
+            android:maxWidth="80dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="ddd"
+            android:textColor="#253231"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/mDoctorDepartmentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/mDoctorNameTv"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/mDoctorNameTv"
+            android:gravity="center_vertical"
+            android:maxWidth="60dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#a4a4a4"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/mDoctorRankTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/mDoctorNameTv"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/mDoctorDepartmentTv"
+            android:maxWidth="60dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="#a4a4a4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mClinicNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mDoctorNameTv"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/mDoctorHeadPortraitImg"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="#a4a4a4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mDoctorDesTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mDoctorHeadPortraitImg"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="#a4a4a4"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

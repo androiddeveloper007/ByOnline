@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:text="我 的"
+            android:textColor="@color/color_white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_main_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/mUserInfoTopLayout"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="@color/color_white"
+                android:orientation="horizontal">
+
+                <com.bowen.commonlib.widget.CircleImageView
+                    android:id="@+id/mHeadPortraitImg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/man"
+                    app:image_radius="50dp"
+                    app:image_type="round" />
+
+                <TextView
+                    android:id="@+id/mUserNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="李时珍，你好！"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="19sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/mFamilyLayout"
+                    style="@style/layout_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:drawableLeft="@drawable/mine_family"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="家庭成员"
+                        android:textColor="#313235"
+                        android:textSize="16.9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/color_main_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/mOrderLayout"
+                    style="@style/layout_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:drawableLeft="@drawable/order"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="我的订单"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mCommentionLayout"
+                    style="@style/layout_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp">
+
+                    <View
+                        style="@style/line_diliver_mine"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="17dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:drawableLeft="@drawable/commention"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="我的咨询"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mDepartmentLayout"
+                    style="@style/layout_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp">
+
+                    <View
+                        style="@style/line_diliver_mine"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="17dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:drawableLeft="@drawable/department"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="门诊预约"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mInterestLayout"
+                    style="@style/layout_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp">
+
+                    <View
+                        style="@style/line_diliver_mine"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="17dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:drawableLeft="@drawable/interest"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="我的关注"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mFolkPrescriptionLayout"
+                    style="@style/layout_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp">
+
+                    <View
+                        style="@style/line_diliver_mine"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="17dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:drawableLeft="@drawable/folkprescription"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="我的偏方"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/color_main_bg" />
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/mInviteLayout"
+                    style="@style/layout_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:drawableLeft="@drawable/invite"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="邀请他人"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mFeedbackLayout"
+                    style="@style/layout_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:drawableLeft="@drawable/feedback"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="吐槽我们"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mSafeSettingLayout"
+                    style="@style/layout_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp">
+
+                    <View
+                        style="@style/line_diliver_mine"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="17dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:drawableLeft="@drawable/safety"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="安全设置"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/color_main_black"
+                        android:textSize="16.9sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/color_main_bg" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+

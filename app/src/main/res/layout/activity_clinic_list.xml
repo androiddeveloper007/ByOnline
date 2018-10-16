@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cube_ptr="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/color_main_bg"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32.1dp"
+        android:background="@color/color_white">
+
+        <TextView
+            android:id="@+id/mCurrentPositionTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/location_red_icon"
+            android:textSize="12sp"
+            android:textColor="@color/color_main_black"
+            android:text="当前位置：广东省，深圳市"/>
+        <TextView
+            android:id="@+id/mChangeCityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="切换城市"
+            android:textColor="@color/color_main"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+    <View style="@style/line_diliver"></View>
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/mPtrFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_main_bg"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+</LinearLayout>

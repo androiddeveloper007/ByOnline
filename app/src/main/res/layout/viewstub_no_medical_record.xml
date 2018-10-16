@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mNoRecordLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="84dp"
+        android:layout_height="108.34dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/no_record" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="您还没有病历，赶快记录吧"
+        android:textColor="@color/color_main_black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/mNoRecordTv"
+        android:layout_width="290dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_main_02"
+        android:gravity="center"
+        android:text="记录病历"
+        android:textColor="@color/color_main"
+        android:textSize="17sp" />
+</LinearLayout>

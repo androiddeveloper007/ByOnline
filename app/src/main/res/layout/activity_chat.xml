@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:cube_ptr="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/color_white">
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/mPtrFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_white"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="10dp"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="95dp"
+        android:background="@color/color_white"
+        android:orientation="vertical" >
+        <View style="@style/line_diliver"></View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+            <EditText
+                android:id="@+id/mChatContentEdit"
+                android:layout_width="275dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/color_main_black"
+                android:background="@drawable/corner_chat_edit_bg"
+                android:hint="发送聊天信息"
+                android:textCursorDrawable="@drawable/shape_chat_eidt_cursor_color"
+                android:textColorHint="@color/color_main_gray_01"
+                android:textSize="12sp"
+                android:inputType="text"
+                android:maxLines="1" />
+            <TextView
+                android:id="@+id/mSendBtn"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:background="@drawable/button_guide_enter"
+                android:text="发送"
+                android:textColor="@color/color_white"/>
+        </RelativeLayout>
+        <View style="@style/line_diliver"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/mGalleryImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/chat_gallery"
+                android:layout_gravity="center_vertical"/>
+            <ImageView
+                android:id="@+id/mTakePhotoImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="52dp"
+                android:background="@drawable/chat_take_photo"
+                android:layout_gravity="center_vertical"/>
+            <ImageView
+                android:id="@+id/mMedicalRecordImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="52dp"
+                android:background="@drawable/chat_medical_record"
+                android:layout_gravity="center_vertical"/>
+            <ImageView
+                android:id="@+id/mReservationImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="52dp"
+                android:background="@drawable/chat_reservation"
+                android:layout_gravity="center_vertical"/>
+            <ImageView
+                android:id="@+id/mCloseTalkImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="52dp"
+                android:src="@drawable/chat_close_talk"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp">
+
+                <TextView
+                    android:id="@+id/mTitleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="17dp"
+                    android:text="田大大的打卡打开数据库设计快递费几十块的积分世纪东方开始对焦"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/mDateTv"
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="2018-02-03  12:10"
+                        android:textColor="@color/color_main_gray"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/mReaderCountTv"
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="2545人阅读"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="13.5sp" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_diliver"
+                    android:layout_marginTop="15dp"></View>
+
+                <TextView
+                    android:id="@+id/mContentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="17dp"
+                    android:paddingBottom="27dp"
+                    android:text="出汗也跟我们的健康息息相关，如果不是正常出汗，就代表着身体的疾病征兆。下面随51养生网小编一起来看看吧！
+
+图片
+
+（与正文同宽度，高度等比例）
+
+1、头面部出汗异常
+
+
+
+一旦头上出汗而全身无汗或少汗，或者经常出汗，往往就意味着阳气有些虚弱或者胃火旺盛；
+
+
+
+如果额头常常出很多汗，可能是肝阳上亢引起的；如果平时鼻子总出汗，说明肺气不足，需要调理补气。"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <View style="@style/line_diliver"></View>
+
+            <TextView
+                android:id="@+id/mSourceTipsTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="17dp"
+                android:paddingBottom="27dp"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:text="声明：该文章转载自 {来源名称} ，如有侵权，请及时联系删除。"
+                android:textColor="@color/color_main_gray"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+

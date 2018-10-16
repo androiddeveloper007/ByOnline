@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="359dp"
+    android:background="@color/color_00"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="359dp"
+        android:background="@color/color_white"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/mFinishTv"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:gravity="center_vertical|right"
+            android:textSize="17sp"
+            android:textColor="@color/color_main"
+            android:text="完成"/>
+
+        <View style="@style/line_diliver"></View>
+
+        <LinearLayout
+            android:id="@+id/mSelfVisiableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/mSelfVisiableImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/selected_visiable_person"/>
+
+            <TextView
+                android:id="@+id/mSelfVisiableTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/color_main_black"
+                android:textSize="17sp"
+                android:text="仅自己可见"/>
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/mLinkFamilyVisiableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal">
+
+            <View style="@style/line_diliver"></View>
+            <ImageView
+                android:id="@+id/mLinkFamilyVisiableImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selected_visiable_person"/>
+
+            <TextView
+                android:id="@+id/mLinkFamilyVisiableTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/mLinkFamilyVisiableImg"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/color_main_black"
+                android:textSize="17sp"
+                android:text="关联家庭成员可见"/>
+            <View style="@style/line_diliver"
+                android:layout_alignParentBottom="true"></View>
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+</LinearLayout>

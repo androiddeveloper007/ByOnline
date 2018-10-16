@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleLayout"
+        android:background="#ffffff"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="#ffffff" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:id="@+id/crowedLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_marginLeft="17dp"
+                        android:background="@drawable/folk_detail_rect_point" />
+                    <TextView
+                        android:id="@+id/tvFolkDetailFitPeopleTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="适用人群："
+                        android:textColor="#a4a4a4"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_folk_detail_fit_people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_toRightOf="@+id/crowedLayout"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="#253231"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/folkPrescriptionListCollect"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/folk_prescription_collect_selector" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#ffffff" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:id="@+id/fitDiseaseLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:background="@drawable/folk_detail_rect_point" />
+                    <TextView
+                        android:id="@+id/tvFolkDetailApplyDiseaseTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:text="偏方主治："
+                        android:textColor="#a4a4a4"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_folk_detail_apply_disease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_toRightOf="@+id/fitDiseaseLayout"
+                    android:textColor="#253231"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:background="#ffffff" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:id="@+id/tvFolkDetailUsageDosageLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_marginLeft="17dp"
+                        android:background="@drawable/folk_detail_rect_point" />
+                    <TextView
+                        android:id="@+id/tvFolkDetailUsageDosageTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="用法用量："
+                        android:textColor="#a4a4a4"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_folk_detail_usage_dosage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_toRightOf="@+id/tvFolkDetailUsageDosageLayout"
+                    android:textColor="#253231"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:background="#ffffff" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:id="@+id/prescriptionSourceLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:background="@drawable/folk_detail_rect_point" />
+                    <TextView
+                        android:id="@+id/FolkDetailFromTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:text="偏方出处："
+                        android:textColor="#a4a4a4"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/FolkDetailFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_toRightOf="@+id/prescriptionSourceLayout"
+                    android:textColor="#253231"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#ffffff"
+                android:letterSpacing="0.1"
+                android:lineSpacingExtra="2dp"
+                android:paddingBottom="22dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/prescription_detail_info"
+                android:textColor="#b8b8b8"
+                android:textSize="14sp" />
+
+            <!--
+                        <ViewStub
+                            android:id="@+id/viewStubDoctorComment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout="@layout/viewstub_doctor_comment" />
+
+                        <ViewStub
+                            android:id="@+id/viewStubDoctorCommentEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout="@layout/viewstub_doctor_comment_empty" />
+
+                        <ViewStub
+                            android:id="@+id/viewStubUserComment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout="@layout/viewstub_user_comment" />
+
+                        <ViewStub
+                            android:id="@+id/viewStubUserCommentEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout="@layout/viewstub_user_comment_empty" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp" />-->
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="52dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/consultDoctorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="#e3e3e3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/color_main">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="咨询医生"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+                <!--
+                    android:drawableLeft="@drawable/consultation"
+                    android:drawablePadding="11dp"-->
+            </LinearLayout>
+<!--
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#e3e3e3" />
+
+            <LinearLayout
+                android:id="@+id/userCommentLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/comment"
+                    android:drawablePadding="11dp"
+                    android:gravity="center"
+                    android:text="评论"
+                    android:textColor="#253231"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/prescriptionCommentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#a4a4a4"
+                    android:textSize="15sp" />
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

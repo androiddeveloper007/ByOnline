@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:background="@drawable/shape_doctor_detail_top_bg" />
+
+        <ImageView
+            android:id="@+id/mBackImg"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/mDoctorNameTopTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:gravity="center_horizontal"
+            android:text="江医生"
+            android:textColor="@color/color_white"
+            android:textSize="18sp" />
+
+
+        <ImageView
+            android:id="@+id/mShareImg"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/share_icon" />
+
+        <com.bowen.tcm.common.widget.ShadowLayout
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="142dp"
+            app:sl_shadow_angle="90"
+            app:sl_shadow_color="@color/color_black_p15"
+            app:sl_shadow_distance="2dp"
+            app:sl_shadow_radius="2.5dp">
+
+            <RelativeLayout
+                android:layout_width="330dp"
+                android:layout_height="355dp"
+                android:background="@drawable/corner_main"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="162dp"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true">
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                           >
+
+                            <TextView
+                                android:id="@+id/mPraiseRateTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="80%"
+                                android:textColor="@color/color_main_red"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/mPraiseRateTv"
+                                android:gravity="center_horizontal"
+                                android:text="好评率"
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:gravity="center_vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/mComplainCountTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="80%"
+                                android:textColor="@color/color_main_red"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/mComplainCountTv"
+                                android:gravity="center_horizontal"
+                                android:text="投诉"
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/mReplyRateTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="80%"
+                                android:textColor="@color/color_main_red"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/mReplyRateTv"
+                                android:gravity="center_horizontal"
+                                android:text="回复率"
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:gravity="center_vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/mServicePeopleCountTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="232322"
+                                android:textColor="@color/color_main_red"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/mServicePeopleCountTv"
+                                android:gravity="center_horizontal"
+                                android:text="服务人次"
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.bowen.tcm.common.widget.ShadowLayout>
+        <com.bowen.commonlib.widget.CircleImageView
+            android:id="@+id/mDoctorHeadPortraitImg"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="93dp"
+            android:src="@drawable/man"
+            app:image_radius="50dp"
+            app:image_type="round" />
+
+        <TextView
+            android:id="@+id/mDoctorNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mDoctorHeadPortraitImg"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="江医生"
+            android:textColor="@color/color_main_black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mDoctorDesTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mDoctorNameTv"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="呼吸内科  主任医师"
+            android:textColor="@color/color_main_gray"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/mDoctorClinicTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mDoctorDesTv"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="济风堂国医馆"
+            android:textColor="@color/color_main_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mAttentionBtn"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/mDoctorClinicTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/selected_main_attention"
+            android:gravity="center"
+            android:text="+关注"
+            android:textColor="@color/color_main"
+            android:textSize="12sp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="29dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/slide_up"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="上滑显示更多"
+                android:textSize="12sp"
+                android:textColor="#b8b8b8"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+
+

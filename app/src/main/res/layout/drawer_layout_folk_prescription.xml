@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_main_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_drawer_Department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:text="科室"
+            android:textColor="#253231"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_drawer_Department"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp" />
+
+
+        <TextView
+            android:id="@+id/tv_drawer_Symptom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:text="适用症状"
+            android:textColor="#253231"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_drawer_Symptom"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp" />
+
+
+        <TextView
+            android:id="@+id/tv_drawer_fit_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:text="试用人群"
+            android:textColor="#253231"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_drawer_fit_people"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+

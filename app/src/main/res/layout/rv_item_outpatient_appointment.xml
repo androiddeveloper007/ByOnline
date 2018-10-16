@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="7dp"
+    android:layout_marginRight="7dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/appointmentTimeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="预约时间："
+            android:textColor="#a4a4a4"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/appointmentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/appointmentTimeTitle"
+            android:gravity="center_vertical"
+            android:textColor="#253231"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/appointmentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:textColor="#00c22e"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/appointmentStatus"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#e3e3e3" />
+
+        <TextView
+            android:id="@+id/orderType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointmentStatus"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:drawableLeft="@drawable/appointment"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="门诊预约"
+            android:textColor="#253231"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/orderFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/appointmentStatus"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="13dp"
+            android:textColor="#f22727"
+            android:textSize="18sp" />
+
+        <com.bowen.commonlib.widget.CircleImageView
+            android:id="@+id/doctorImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/orderType"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/imageviewboundshape"
+            android:src="@drawable/man" />
+
+        <TextView
+            android:id="@+id/doctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderType"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/doctorImg"
+            android:gravity="center_vertical"
+            android:maxWidth="80dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#253231"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/doctorLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderType"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/orderDepartment"
+            android:gravity="center_vertical"
+            android:maxWidth="80dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#a4a4a4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/orderDepartment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderType"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/doctorName"
+            android:gravity="center_vertical"
+            android:maxWidth="80dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#a4a4a4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/hospitalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doctorName"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/doctorImg"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#a4a4a4"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/doctorImg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#e3e3e3" />
+
+        <TextView
+            android:id="@+id/visitTimeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doctorImg"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="就诊时间:"
+            android:textColor="#a4a4a4"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/visitTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/doctorImg"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:textColor="#253231"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

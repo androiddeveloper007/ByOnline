@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_white">
+
+   <com.bowen.commonlib.widget.CircleImageView
+       android:id="@+id/mHeadPortraitImg"
+       android:layout_width="30dp"
+       android:layout_height="30dp"
+       android:layout_marginLeft="15dp"
+       android:layout_centerVertical="true"
+       android:src="@drawable/man"
+       app:image_radius="50dp"
+       app:image_type="round" />
+
+   <TextView
+       android:id="@+id/mUserNameTv"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:layout_marginLeft="10dp"
+       android:layout_toRightOf="@+id/mHeadPortraitImg"
+       android:gravity="center_vertical"
+       android:text="用户1号"
+       android:textColor="@color/color_main_black"
+       android:textSize="12sp" />
+
+   <TextView
+       android:id="@+id/mContentTv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentRight="true"
+       android:layout_centerVertical="true"
+       android:layout_marginRight="15dp"
+       android:text="赠送妙手回春"
+       android:textColor="@color/color_main_black"
+       android:textSize="15sp" />
+
+   <View style="@style/line_diliver"
+       android:layout_alignParentBottom="true"></View>
+</RelativeLayout>

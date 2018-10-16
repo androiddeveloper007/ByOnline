@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EFEFEF"
+        android:scrollbars="none">
+        <!--
+        android:fillViewport="true"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/contentLayout"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:text="偏方名称"
+                    android:textColor="#a4a4a4"
+                    android:textSize="17sp" />
+
+                <RelativeLayout
+                    android:id="@+id/addFolkPrescriptionNameLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+                    <EditText
+                        android:id="@+id/addFolkPrescriptionName"
+                        style="@style/style_input_eidtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical|right"
+                        android:layout_marginRight="15dp"
+                        android:paddingRight="5dp"
+                        android:background="@null"
+                        android:hint="请填写偏方名称"
+                        android:textColor="#253231"
+                        android:textSize="17sp" />
+                    <!--<ImageView
+                        android:id="@+id/clearFolkPrescriptionNameImg"
+                        android:layout_width="18.7dp"
+                        android:layout_height="18.7dp"
+                        android:layout_marginRight="13dp"
+                        android:visibility="gone"
+                        android:background="@drawable/clear_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="13dp" />-->
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/addFolkPrescriptionNameLayout"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#e3e3e3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addFolkPrescriptionNameLayout"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:text="用法用量"
+                    android:textColor="#a4a4a4"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/addFolkPrescriptionUse"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/addFolkPrescriptionNameLayout"
+                    android:gravity="top|right"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@null"
+                    android:minLines="4"
+                    android:hint="请填写偏方的用法用量"
+                    android:textColor="#253231"
+                    android:textColorHint="@color/color_main_gray"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="某些药物有用药禁忌，请谨慎选择该偏方适用的人群"
+                android:textSize="14sp"
+                android:textColor="#a4a4a4"/>
+
+            <RelativeLayout
+                android:id="@+id/addFolkPrescriptionTrialCrowd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:text="适用人群"
+                    android:textColor="#a4a4a4"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/applyCrowdName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:drawablePadding="3dp"
+                    android:drawableRight="@drawable/commend_more"
+                    android:gravity="center_vertical"
+                    android:text="全部"
+                    android:textColor="#253231"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="请选择该偏方常用于哪些病症"
+                android:textSize="14sp"
+                android:textColor="#a4a4a4" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:id="@+id/fitDiseaseLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="适用病状"
+                        android:textColor="#a4a4a4"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/fitDiseaseEdit"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:drawablePadding="3dp"
+                        android:drawableRight="@drawable/commend_more"
+                        android:text="选择"
+                        android:gravity="right|center_vertical"
+                        android:textSize="17sp"
+                        android:textColor="#253231"/>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fitDiseaseRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fitDiseaseLayout"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mTitleBar"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="58.2dp"
+            android:background="@color/color_white">
+
+            <ImageView
+                android:id="@+id/mPayProductImg"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/inquiry_img_text_consult" />
+
+            <TextView
+                android:id="@+id/mPayProductNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="13.3dp"
+                android:layout_toRightOf="@+id/mPayProductImg"
+                android:gravity="center_vertical"
+                android:text="图文咨询"
+                android:textColor="@color/color_main_black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/mPayProductPriceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="￥ 50.00"
+                android:textColor="#ff5418"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View style="@style/line_diliver"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/color_white">
+
+            <com.bowen.commonlib.widget.CircleImageView
+                android:id="@+id/mHeadPortraitImg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/man"
+                app:image_radius="50dp"
+                app:image_type="round" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/mHeadPortraitImg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mDoctorNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="姜医生"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/mDoctorDepartmentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="呼吸内科"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/mDoctorRankTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="主治医生"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/mClinicNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="疾风堂国医馆"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="vertical"
+            android:background="@color/color_white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="选择支付方式"
+                android:textSize="15sp"
+                android:textColor="@color/color_main_black"/>
+            <View style="@style/line_diliver"></View>
+
+            <RelativeLayout
+                android:id="@+id/mWechatPayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:id="@+id/mWechatPayImg"
+                    android:layout_width="20dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/wechat_pay_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/mWechatPayImg"
+                    android:gravity="center_vertical"
+                    android:text="微信支付"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/mWechatPayCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checked_radio_btn"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mAlipayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/color_white">
+                <View style="@style/line_diliver"></View>
+                <ImageView
+                    android:id="@+id/mAliPayImg"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/alipay_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/mAliPayImg"
+                    android:gravity="center_vertical"
+                    android:text="支付宝支付"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/mAliPayCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:button="@drawable/checked_radio_btn"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white">
+
+        <TextView
+            android:id="@+id/mTotalPayTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="共需支付"
+            android:textColor="@color/color_main_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTotalPayTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/mTotalPayTitleTv"
+            android:gravity="center_vertical"
+            android:text="￥ 50.00"
+            android:textColor="#ff5841"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/mImmediatePayTv"
+            android:layout_width="106dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/color_main"
+            android:gravity="center"
+            android:text="立即支付"
+            android:textColor="@color/color_white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+

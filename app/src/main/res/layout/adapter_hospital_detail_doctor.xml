@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.bowen.commonlib.widget.CircleImageView
+        android:id="@+id/doctorImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/man" />
+
+    <TextView
+        android:id="@+id/doctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@+id/doctorImg"
+        android:gravity="center_vertical"
+        android:text="林西"
+        android:textColor="#253231"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doctorName"
+        android:layout_toRightOf="@+id/doctorImg"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:text="济风堂国医馆"
+        android:textColor="#a4a4a4"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/doctorLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doctorName"
+        android:layout_toRightOf="@+id/department"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:gravity="center_vertical"
+        android:text="主任医师"
+        android:textColor="#a4a4a4"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/hospitalDetailConsult"
+        android:layout_width="78dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/button_guide_enter"
+        android:gravity="center"
+        android:text="我要咨询"
+        android:textColor="@color/color_white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/doctorGoodAt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/department"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="18dp"
+        android:gravity="center_vertical"
+        android:text="擅长治疗："
+        android:textColor="#a4a4a4"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/divider_folk_prescription"
+        style="@style/line_diliver"
+        android:layout_below="@+id/doctorGoodAt"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"/>
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/color_main_bg"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.amap.api.maps2d.MapView
+                android:id="@+id/mMapView"
+                android:layout_width="match_parent"
+                android:layout_height="277dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/mClinicNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textColor="@color/color_main_black"/>
+                <TextView
+                    android:id="@+id/mClinicAddressTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11.3dp"
+                    android:drawablePadding="2dp"
+                    android:layout_marginTop="5dp"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/color_main_gray"
+                    android:drawableLeft="@drawable/location_grey"/>
+
+                <RelativeLayout
+                    android:id="@+id/mDialLayout"
+                    android:layout_width="330dp"
+                    android:layout_height="42dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/button_main_05">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="16.6dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/clinic_call_icon"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="拨号"
+                            android:textSize="15sp"
+                            android:textColor="@color/color_main"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:background="@color/color_white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="医馆相册"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/mMoreGalleryTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:text="更多"
+                    android:textColor="@color/color_main"
+                    android:textSize="12sp" />
+                <View style="@style/line_diliver"
+                    android:layout_below="@+id/mMoreGalleryTv"></View>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/mMoreGalleryTv">
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

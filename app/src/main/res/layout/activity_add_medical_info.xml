@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+    <RelativeLayout
+        android:id="@+id/mDiseaseNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/color_white">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="17sp"
+           android:layout_centerVertical="true"
+           android:textSize="17sp"
+           android:text="疾病名称"
+           android:textColor="#a4a4a4"/>
+        <TextView
+            android:id="@+id/mDiseaseNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:drawablePadding="2dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:textSize="17sp"
+            android:text="请选择疾病名称"
+            android:textColor="@color/color_main_gray"/>
+        <View style="@style/line_diliver"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:orientation="vertical"
+        android:background="@color/color_white">
+
+        <View style="@style/line_diliver"></View>
+
+        <EditText
+            android:id="@+id/mDiseaseDesEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="11dp"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="简单描述一下病情"
+            android:maxLength="500"
+            android:minHeight="226dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="18dp"
+            android:textColor="@color/color_main_black"
+            android:textColorHint="@color/color_main_gray"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/mContentCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textSize="17sp"
+            android:textColor="@color/color_main_gray"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="0/500" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mDiseaseTimeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/color_white">
+        <View style="@style/line_diliver"></View>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17sp"
+            android:layout_centerVertical="true"
+            android:textSize="17sp"
+            android:text="生病时间"
+            android:textColor="#a4a4a4"/>
+        <TextView
+            android:id="@+id/mDiseaseTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:drawablePadding="2dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:textSize="17sp"
+            android:text="2017-02-06"
+            android:textColor="@color/color_main_black"/>
+    </RelativeLayout>
+    <View style="@style/line_diliver" />
+</LinearLayout>

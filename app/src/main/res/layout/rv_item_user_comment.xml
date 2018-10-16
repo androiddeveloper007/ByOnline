@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.bowen.commonlib.widget.CircleImageView
+        android:id="@+id/userImg"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="11dp"
+        android:src="@drawable/man"
+        />
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/userImg"
+        android:layout_marginTop="21dp"
+        android:text="林西"
+        android:textColor="#253231"
+        android:textSize="17sp"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/commentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="20dp"
+        android:text="06-22 12:00"
+        android:textColor="#a4a4a4"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        />
+    <com.bowen.commonlib.widget.CollapsedTextView
+        android:id="@+id/userComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userImg"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="22dp"
+        android:background="@android:color/white"
+        app:tipsColor="#03b5a6"
+        app:expandedText="展开"
+        app:collapsedText="收起"
+        app:collapsedDrawable="@drawable/collaped_up"
+        app:expandedDrawable="@drawable/collaped_down" />
+
+    <View
+        android:id="@+id/dividerUserComment"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/userComment"
+        android:background="@color/color_main_bg" />
+</RelativeLayout>

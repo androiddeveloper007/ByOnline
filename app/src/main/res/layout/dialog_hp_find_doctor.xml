@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="412dp"
+    android:background="@color/color_00"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="412dp"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            >
+            <TextView
+                android:id="@+id/mTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="67dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:textColor="@color/color_main_black"
+                android:text="常见疾病"/>
+
+            <TextView
+                android:id="@+id/mCancleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="67dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:textColor="@color/color_main"
+                android:text="取消"/>
+        </RelativeLayout>
+        <View style="@style/line_diliver"></View>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            />
+    </LinearLayout>
+</LinearLayout>

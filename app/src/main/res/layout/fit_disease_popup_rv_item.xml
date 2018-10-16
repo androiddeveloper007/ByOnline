@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/mContentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:paddingRight="5dp"
+            android:text="推荐"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#dd393a3e"
+            android:textSize="14sp"/>
+
+        <CheckBox
+            android:id="@+id/checkFitDiseaseItem"
+            style="@style/DiseaseCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_00"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mContentTv"
+        android:layout_width="86dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/button_choose_clomns"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="推荐"
+        android:textColor="@color/select_choose_column_item"
+        android:textSize="15dp" />
+
+</RelativeLayout>

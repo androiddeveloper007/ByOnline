@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:layout_alignParentBottom="true">
+
+        <com.bowen.commonlib.widget.CirclePageIndicator
+            android:id="@+id/mViewpagerIndicator"
+            android:padding="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/mSkipTv"
+        android:layout_width="48dp"
+        android:layout_height="22dp"
+        android:text="跳过"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_main_01"
+        android:textColor="@color/color_white"/>
+
+</RelativeLayout>

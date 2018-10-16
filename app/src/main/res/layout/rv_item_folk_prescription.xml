@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="135dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@drawable/button_layout">
+
+        <TextView
+            android:id="@+id/tv_rv_item_prescription_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="23dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#253231"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/folkPrescriptionListCollect"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/folk_prescription_collect_selector" />
+
+        <TextView
+            android:id="@+id/tv_rv_item_fit_people0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rv_item_prescription_name"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="10dp"
+            android:text="适用于："
+            android:textColor="#b8b8b8"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tvApplyCrowdStr"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rv_item_prescription_name"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_rv_item_fit_people0"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ff5418"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_rv_item_main_treat0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rv_item_prescription_name"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="10dp"
+            android:text="主治："
+            android:textColor="#b8b8b8"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tvApplyDisease"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rv_item_prescription_name"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_rv_item_main_treat0"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ff5418"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/usageDosage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rv_item_main_treat0"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="测试文字"
+            android:textColor="#a4a4a4"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider_folk_prescription"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_main_bg" />
+</RelativeLayout>

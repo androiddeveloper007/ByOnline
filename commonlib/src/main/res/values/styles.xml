@@ -1,0 +1,110 @@
+<resources>
+    <!-- 透明对话框 -->
+    <style name="dialog_transparent_style" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/color_00</item>
+    </style>
+
+
+    <style name="dialog_transparent_bg_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/color_00</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <!-- 横向分割线 -->
+    <style name="line_diliver">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.67dp</item>
+        <item name="android:background">#e3e3e3</item>
+    </style>
+    <!-- "我的"横向分割线 -->
+    <style name="line_diliver_mine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.67dp</item>
+        <item name="android:background">#e3e3e3</item>
+    </style>
+
+    <style name="line_diliver_h">
+        <item name="android:layout_width">0.67dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#e3e3e3</item>
+    </style>
+
+    <style name="dialog_no_animation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+
+    </style>
+
+    <!--进件输入框样式-->
+    <style name="style_input_eidtext">
+        <item name="android:layout_width">212dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxEms">12</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">15.8sp</item>
+        <item name="android:textColor">@color/color_main_black</item>
+        <item name="android:textColorHint">@color/color_main_gray</item>
+    </style>
+
+
+    <!--正常输入框样式-->
+    <style name="style_input_eidtext_normal">
+        <item name="android:layout_width">212dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:maxEms">12</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">15.8sp</item>
+        <item name="android:textColor">@color/color_main_black</item>
+        <item name="android:textColorHint">@color/color_main_gray</item>
+    </style>
+
+    <style name="text_marquee">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="button_main_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">42.3dp</item>
+        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:layout_marginRight">13dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="button_next_style">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">42.3dp</item>
+        <item name="android:layout_marginLeft">9dp</item>
+        <item name="android:layout_marginRight">9dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+</resources>

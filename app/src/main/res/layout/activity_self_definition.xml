@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54.3dp"
+        android:background="@color/color_white">
+        <EditText
+            android:id="@+id/mInputEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="226dp"
+            android:paddingTop="18dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:gravity="left"
+            android:background="@null"
+            android:textSize="17sp"
+            android:textColor="@color/color_main_black"
+            android:hint="请输入疾病名称"
+            android:textColorHint="@color/color_main_gray" />
+    </RelativeLayout>
+</LinearLayout>

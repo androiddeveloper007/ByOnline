@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:cube_ptr="http://schemas.android.com/tools"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/color_main">
+
+        <FrameLayout
+            android:id="@+id/mSearchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="55dp"
+                android:paddingLeft="40dp"
+                android:textColor="#6bd7cd"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:background="@drawable/edit_rect_search_bg"
+                android:text="按姓名、疾病、症状、医院搜索医生"
+                android:textSize="14sp"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/edit_search1"
+                android:layout_gravity="center_vertical"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/mTopTitleTv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:text="@string/app_name"
+            android:textColor="@color/color_white"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/mMessageImg"
+            android:layout_width="22.7dp"
+            android:layout_height="18.33dp"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17.3dp"
+            android:background="@drawable/icon_message" />
+
+        <TextView
+            android:id="@+id/mMessageCountTv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/color_red"
+            android:visibility="gone"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/shape_circle_white"></TextView>
+    </RelativeLayout>
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/mPtrFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_main_bg"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <com.bowen.tcm.common.widget.FixConflictRecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="@color/color_main"
+    >
+    <ImageView
+        android:layout_width="37dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/back" />
+
+    <com.bowen.commonlib.widget.CircleImageView
+        android:id="@+id/mHeadPortraitImg"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="1dp"
+        app:image_radius="100dp"
+        app:image_type="round"
+        />
+
+    <TextView
+        android:id="@+id/mNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="6dp"
+        android:text=""
+        android:textColor="@color/color_white"
+        android:textSize="17sp" />
+</LinearLayout>

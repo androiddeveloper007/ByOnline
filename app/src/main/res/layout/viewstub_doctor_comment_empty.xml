@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_marginLeft="20dp"
+        android:text="专家点评"
+        android:textColor="#253231"
+        android:textSize="17sp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/commend_doctor"
+        android:drawablePadding="5dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e3e3e3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="暂无内容"
+        android:textColor="#253231"
+        android:textSize="17sp"
+        android:layout_centerInParent="true"
+        />
+
+</LinearLayout>

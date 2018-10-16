@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlHospital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hospitalImg"
+        android:layout_marginTop="17dp">
+
+        <TextView
+            android:id="@+id/hospitalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:text="济风堂国医馆福田分店"
+            android:textColor="#253231"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:id="@+id/hospitalCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/hospital_call" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/hospitalAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlHospital"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/location_grey"
+        android:drawablePadding="0dp"
+        android:gravity="center_vertical"
+        android:text="广东省深圳市金田路4036号"
+        android:textColor="#a4a4a4"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <View
+        style="@style/line_diliver"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp" />
+
+    <com.bowen.commonlib.widget.CollapsedTextView
+        android:id="@+id/hospitalIntroduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hospitalName"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="17dp"
+        android:descendantFocusability="blocksDescendants"
+        android:text="济风堂国医馆福田分店"
+        android:textColor="#a4a4a4"
+        app:collapsedDrawable="@drawable/collaped_up"
+        app:collapsedText="收起"
+        app:expandedDrawable="@drawable/collaped_down"
+        app:expandedText="展开"
+        app:tipsColor="#03b5a6" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/color_main_bg" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="17dp"
+        android:drawableLeft="@drawable/hospital_detail_doctor_list"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text="医生列表"
+        android:textSize="17sp"
+        android:textColor="@color/color_main_black"/>
+
+</LinearLayout>
+
+
+
+

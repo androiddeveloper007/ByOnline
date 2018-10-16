@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mNoRecordLayout"
+    android:layout_width="match_parent"
+    android:layout_height="480dp"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="84dp"
+            android:layout_height="108.34dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/no_record" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_horizontal"
+            android:text="暂无数据"
+            android:textColor="@color/color_main_black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_36">36dp</dimen>
+
+    <integer name="animationDuration">300</integer>
+
+    <dimen name="full_title_bar_height">61dp</dimen>
+    <dimen name="title_bar_height">48dp</dimen>
+    <dimen name="stutas_bar_height">20dp</dimen>
+
+    <!--表情键盘高度-->
+    <dimen name="keyboard_height">210dip</dimen>
+
+    <dimen name="font_1">16sp</dimen>
+    <dimen name="font_2">14sp</dimen>
+    <dimen name="font_3">13sp</dimen>
+    <dimen name="font_4">12sp</dimen>
+    <dimen name="font_5">18sp</dimen>
+    <dimen name="font_6">8sp</dimen>
+    <dimen name="font_7">28sp</dimen>
+    <dimen name="font_8">36sp</dimen>
+    <dimen name="font_9">11sp</dimen>
+    <dimen name="fab_margin">11dp</dimen>
+
+    <dimen name="move_line_init">47dp</dimen>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:cube_ptr="http://schemas.android.com/tools"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/mTopBgImg"
+        android:layout_width="match_parent"
+        android:layout_height="201.67dp"
+        android:visibility="visible"
+        android:background="@drawable/home_head_bg" />
+
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/mPtrFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_00"
+        cube_ptr:ptr_resistance="1.7"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false">
+
+        <com.bowen.tcm.common.widget.ScrollRecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="50dp" />
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <ViewStub
+        android:id="@+id/mNoRecordViewStup"
+        android:layout_marginTop="143dp"
+        android:layout="@layout/viewstub_no_medical_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ImageView
+        android:id="@+id/mBackImg"
+        android:layout_width="37dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back" />
+
+    <RelativeLayout
+        android:id="@+id/mTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:visibility="gone"
+        android:background="@color/color_main">
+
+        <ImageView
+            android:id="@+id/mTitleBackImg"
+            android:layout_width="37dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <com.bowen.commonlib.widget.CircleImageView
+                android:id="@+id/mTitleHeadPortraitImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="33dp"
+                android:src="@drawable/man"
+                app:image_radius="100dp"
+                app:image_type="round" />
+
+            <TextView
+                android:id="@+id/mTitleNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="33dp"
+                android:text="李时珍"
+                android:textColor="@color/color_white"
+                android:textSize="17sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/mChangeAccountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="35dp"
+            android:text="切换用户"
+            android:textColor="@color/color_white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    
+    <ImageView
+        android:id="@+id/mAddMedicalRecordImg"
+        android:layout_width="46.66dp"
+        android:layout_height="46.66dp"
+        android:visibility="gone"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/home_add"/>
+
+</RelativeLayout>

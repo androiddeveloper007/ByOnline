@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="107dp"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+    <View style="@style/line_diliver"></View>
+    <TextView
+        android:id="@+id/mAddMedicineTv"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="33dp"
+        android:background="@drawable/button_main"
+        android:gravity="center"
+        android:text="新增药品"
+        android:textColor="@color/color_white"
+        android:textSize="17sp" />
+
+</RelativeLayout>
+
+
+

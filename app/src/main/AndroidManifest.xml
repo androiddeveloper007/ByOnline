@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bowen.tcm">
+    <!-- 连接互联网Internet权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- SD卡读取权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 生成快捷图标权限 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <!--获取Camera权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.hradware.camera" />
+    <uses-permission android:name="android.hradware.camera.autofocus" />
+
+    <!-- 允许一个程序获取信息有关当前或最近运行的任务，是否活动等等 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".BowenApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${APP_NAME}"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Slide"
+        tools:replace="android:label,android:name">
+
+        <!--高德地图key-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="${GAODE_API_KEY}" />
+        <service android:name="com.amap.api.location.APSService"></service>
+
+        <!-- 友盟 start -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APPKEY}" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL}" />
+
+        <!-- 支付 start-->
+        <!-- 支付宝支付 start-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <!--微信支付-->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!-- 支付 end-->
+
+
+        <activity
+            android:name=".main.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--网络监测-->
+        <receiver android:name=".main.receiver.NetworkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--main-->
+        <activity
+            android:name=".main.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".main.activity.BrowserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".main.activity.MessageActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!--login-->
+        <activity
+            android:name=".login.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".login.activity.QuickLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.BindingPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.VerifiPhoneActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".login.activity.RegistActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".login.activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!--medical record-->
+        <activity
+            android:name=".medicalrecord.activity.MedicalRecordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".medicalrecord.activity.AddMedicalInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".medicalrecord.activity.AddMedicalDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".medicalrecord.activity.EditMedicalInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".medicalrecord.activity.EditMedicalDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".mine.activity.SelfDefinitionActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".medicalrecord.activity.MedicalDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".medicalrecord.activity.MedicalAllDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--mine-->
+        <activity
+            android:name=".mine.activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mine.activity.AddFamilyMemberActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mine.activity.FamilyMemberActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mine.activity.FamilyMemberInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mine.activity.FeedBackActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mine.activity.SafeSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bowen.tcm.mine.activity.MyOutpatientAppointmentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bowen.tcm.mine.activity.MyOrderDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bowen.tcm.mine.activity.MyConsultActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bowen.tcm.mine.activity.MySubscribeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bowen.tcm.mine.activity.MyPrescriptionActivity"
+            android:screenOrientation="portrait" />
+        <!--我的订单-->
+        <activity
+            android:name="com.bowen.tcm.mine.activity.MyOrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+
+        <!--提醒-->
+        <activity
+            android:name=".remind.activity.AddAlarmRemindActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".remind.activity.EditAlarmRemindActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".remind.activity.AlarmRemindActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".remind.activity.ChooseAlarmRepeateTimeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".remind.activity.RemindWayActivtiy"
+            android:screenOrientation="portrait" />
+
+
+        <receiver android:name=".remind.receiver.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.bowen.tcm.alarm" />
+            </intent-filter>
+        </receiver>
+
+        <!--通过AppWidget实现进程保护&ndash;&gt;-->
+        <receiver android:name=".remind.receiver.BoWenWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.bowen.tcm.appWidgetUpdate"></action>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/bowen_appwidget" />
+        </receiver>
+
+        <activity
+            android:name=".remind.activity.ClockAlarmActivity"
+            android:screenOrientation="portrait" />
+
+        <!--资讯-->
+        <activity
+            android:name=".healthcare.activity.NewDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".healthcare.activity.ChooseColumnsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".healthcare.activity.ColumnsSortActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".healthcare.activity.HealthCareActivity"
+            android:screenOrientation="portrait" />
+
+        <!--偏方-->
+        <activity
+            android:name=".folkprescription.activity.FolkPrescriptionActivity"
+            android:screenOrientation="portrait" />
+        <!--偏方搜索-->
+        <activity
+            android:name=".folkprescription.activity.FolkPrescriptionSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!--偏方详情-->
+        <activity
+            android:name=".folkprescription.activity.FolkPrescriptionDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--偏方医生点评详情-->
+        <activity
+            android:name=".folkprescription.activity.DoctorCommentActivity"
+            android:screenOrientation="portrait" />
+        <!--添加偏方-->
+        <activity
+            android:name=".folkprescription.activity.AddFolkPrescriptionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!--用户评论-->
+        <activity
+            android:name=".folkprescription.activity.UserCommentActivity"
+            android:screenOrientation="portrait" />
+        <!--用户评论编辑页-->
+        <activity
+            android:name=".folkprescription.activity.UserCommentEditActivity"
+            android:screenOrientation="portrait" />
+        <!--添加偏方，病症搜索页面-->
+        <activity
+            android:name=".folkprescription.activity.FitDiseaseSelectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!--我的偏方-->
+
+
+        <!--问诊-->
+        <activity
+            android:name=".inquiry.activity.FindDoctorActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.PayDetaitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".inquiry.activity.PayResultActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.LoadMedicalRecordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.GiveGiftActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.UserGiftActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.DoctorDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.FamousChineseHospitalActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.HospitalDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HospitalDetail" />
+
+        <activity
+            android:name=".inquiry.activity.FamousDoctorDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.UserDoctorCommentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.ImgTextCosultDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.DoctorSearchActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.OutpatientAppointmentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.SubmitReservationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mine.activity.ServiceEvaluateActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.ClinicListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.ClinicMapActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inquiry.activity.ClinicMapDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mine.activity.OutpatientAppointmentDetailActivity"
+            android:screenOrientation="portrait" />
+
+
+    </application>
+
+</manifest>

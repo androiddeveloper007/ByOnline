@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp">
+
+        <com.bowen.commonlib.widget.CircleImageView
+            android:id="@+id/mHeadPortraitImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/man" />
+
+        <TextView
+            android:id="@+id/mUserNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/mHeadPortraitImg"
+            android:gravity="center_vertical"
+            android:text="林西"
+            android:textColor="@color/color_main_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/commentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:text="06-22 12:00"
+            android:textColor="@color/color_main_gray"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mCommentProductNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="问诊方式：图文问诊"
+            android:textColor="@color/color_main_gray_01"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mCommentProductPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="问诊费用：50元"
+            android:textColor="@color/color_main_gray_01"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="好评度"
+            android:textColor="@color/color_main_gray_01"
+            android:textSize="12sp" />
+
+        <RatingBar
+            android:id="@+id/mRatingBarSmall"
+            style="@style/RatingBarSmaller"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="5"
+            android:stepSize="0.5" />
+    </LinearLayout>
+
+
+    <com.bowen.commonlib.widget.CollapsedTextView
+        android:id="@+id/userComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userImg"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_white"
+        app:collapsedDrawable="@drawable/collaped_up"
+        app:collapsedText="收起"
+        app:expandedDrawable="@drawable/collaped_down"
+        app:expandedText="展开"
+        app:tipsColor="@color/color_main" />
+
+    <View
+        android:id="@+id/dividerUserComment"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_main_bg" />
+</LinearLayout>

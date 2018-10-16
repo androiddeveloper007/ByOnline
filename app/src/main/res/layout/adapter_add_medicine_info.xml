@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="54.3dp"
+    android:background="@color/color_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/mMedicineNameTv"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="17dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:gravity="center_vertical"
+            android:text="蓝天口服"
+            android:textColor="@color/color_main_black"
+            android:textSize="16.9sp" />
+
+        <TextView
+            android:id="@+id/mMedicineVolmeTv"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="17dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:gravity="center_vertical"
+            android:text="3瓶"
+            android:textColor="@color/color_main_black"
+            android:textSize="16.9sp" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/mLineView"
+        style="@style/line_diliver"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginRight="13.3dp"
+        android:layout_alignParentBottom="true"></View>
+
+</RelativeLayout>

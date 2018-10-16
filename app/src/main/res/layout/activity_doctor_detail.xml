@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bowen.commonlib.widget.CustomScrollView
+        android:id="@+id/mCustomScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_main_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:id="@+id/mTopBgImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="215dp"
+                    android:background="@drawable/shape_doctor_detail_top_bg" />
+
+                <ImageView
+                    android:id="@+id/mBackImg"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="33dp"
+                    android:background="@drawable/back_icon" />
+
+                <ImageView
+                    android:id="@+id/mShareImg"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="33dp"
+                    android:background="@drawable/share_icon" />
+
+                <com.bowen.commonlib.widget.CircleImageView
+                    android:id="@+id/mDoctorHeadPortraitImg"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28dp"
+                    android:src="@drawable/man"
+                    app:image_radius="50dp"
+                    app:image_type="round" />
+
+                <TextView
+                    android:id="@+id/mDoctorNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mDoctorHeadPortraitImg"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/color_white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/mDoctorDesTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mDoctorNameTv"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/color_white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mAttentionBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/mDoctorDesTv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/selected_attention"
+                    android:gravity="center"
+                    android:text="+关注"
+                    android:textColor="@color/color_white"
+                    android:textSize="12sp" />
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="340dp"
+                    android:layout_height="66dp"
+                    android:layout_below="@+id/mAttentionBtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_white"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="330dp"
+                        android:layout_height="56dp"
+                        android:layout_below="@+id/mAttentionBtn"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mPraiseRateTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text=""
+                                android:textColor="@color/color_main_red"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="好评率"
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mReplyRateTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text=""
+                                android:textColor="@color/color_main_red"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="回复率"
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mComplainCountTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text=""
+                                android:textColor="@color/color_main_red"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="投诉人次"
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mServerPeopleCountTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text=""
+                                android:textColor="@color/color_main_red"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="服务人次"
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/mProductImgTextLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:background="@color/color_white">
+
+                    <ImageView
+                        android:id="@+id/mImgTextConsultImg"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/inquiry_img_text_consult" />
+
+                    <LinearLayout
+                        android:id="@+id/mImgTextConsultLayout"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_toRightOf="@+id/mImgTextConsultImg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mImgTextConsultNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/mPayProductImg"
+                            android:gravity="center_vertical"
+                            android:text="图文咨询"
+                            android:textColor="@color/color_main_black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:text="7天内不限次数"
+                            android:textColor="@color/color_main_gray"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/mImgTextConsultPriceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@+id/mImgTextConsultLayout"
+                        android:text=""
+                        android:textColor="#ff5418"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/mGoConsultBtn"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/button_guide_enter"
+                        android:gravity="center"
+                        android:text="去咨询"
+                        android:textColor="@color/color_white"
+                        android:textSize="12sp" />
+
+                    <View
+                        style="@style/line_diliver"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentBottom="true"></View>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mProductInquiryReservationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:background="@color/color_white">
+
+                    <ImageView
+                        android:id="@+id/mInquiryReservationImg"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/inquiry_reservation" />
+
+                    <LinearLayout
+                        android:id="@+id/mInquiryReservationLayout"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_toRightOf="@+id/mInquiryReservationImg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mPayProductNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="门诊预约"
+                            android:textColor="@color/color_main_black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:text="预约到店就诊"
+                            android:textColor="@color/color_main_gray"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/mInquiryReservationPriceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@+id/mInquiryReservationLayout"
+                        android:text=""
+                        android:textColor="#ff5418"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/mGoReservationBtn"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/button_guide_enter"
+                        android:gravity="center"
+                        android:text="预约"
+                        android:textColor="@color/color_white"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="擅长疾病"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="15sp" />
+
+                <View style="@style/line_diliver"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"></View>
+
+                <TextView
+                    android:id="@+id/mDoctorGoodSkillTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/color_main_gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="执业经历"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="15sp" />
+
+                <View style="@style/line_diliver"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"></View>
+
+                <com.bowen.commonlib.widget.CollapsedTextView
+                    android:id="@+id/mDoctorHistoryTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_white"
+                    app:collapsedDrawable="@drawable/collaped_up"
+                    app:collapsedLines="3"
+                    app:collapsedText="收起"
+                    app:expandedDrawable="@drawable/collaped_down"
+                    app:expandedText="展开"
+                    app:tipsColor="#03b5a6" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/mUserCommentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:background="@color/color_white"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="用户评论"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/mMoreCommentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:text="更多（12）"
+                    android:textColor="@color/color_main"
+                    android:textSize="12sp" />
+
+                <View style="@style/line_diliver"
+                    android:id="@+id/mCommentTitleLine"
+                    android:layout_below="@+id/mMoreCommentTv"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"></View>
+
+                <LinearLayout
+                    android:id="@+id/mCommentContentLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mCommentTitleLine"
+                    android:background="@color/color_white"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp">
+
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mCommentUserHeadPortraitImg"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp"
+                            app:image_radius="50dp"
+                            app:image_type="round"
+                            android:src="@drawable/man" />
+
+                        <TextView
+                            android:id="@+id/mCommentUserNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/mCommentUserHeadPortraitImg"
+                            android:gravity="center_vertical"
+                            android:text="林西"
+                            android:textColor="@color/color_main_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/mUserCommentTimeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center_vertical"
+                            android:text="06-22 12:00"
+                            android:textColor="@color/color_main_gray"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/mCommentProductNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="问诊方式：图文问诊"
+                            android:textColor="@color/color_main_gray_01"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/mCommentProductPriceTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center_vertical"
+                            android:text="问诊费用：50元"
+                            android:textColor="@color/color_main_gray_01"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="好评度"
+                            android:textColor="@color/color_main_gray_01"
+                            android:textSize="12sp" />
+
+                        <RatingBar
+                            android:id="@+id/mCommentRatingBar"
+                            style="@style/RatingBarSmaller"
+                            android:layout_width="wrap_content"
+                            android:layout_height="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="3"
+                            android:stepSize="0.5" />
+                    </LinearLayout>
+
+                    <com.bowen.commonlib.widget.CollapsedTextView
+                        android:id="@+id/mUserCommentContentTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/color_main_gray"
+                        android:background="@color/color_white"
+                        app:collapsedDrawable="@drawable/collaped_up"
+                        app:collapsedLines="3"
+                        app:collapsedText="收起"
+                        app:expandedDrawable="@drawable/collaped_down"
+                        app:expandedText="展开"
+                        app:tipsColor="@color/color_main" />
+                </LinearLayout>
+                <ViewStub
+                    android:id="@+id/viewStubDoctorConsultEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mCommentTitleLine"
+                    android:layout="@layout/empty_view_doctor_consult" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mGiveGiftLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="9dp"
+                android:background="@color/color_white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="用户心意"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/mMoreGiftTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:text="更多（12）"
+                    android:textColor="@color/color_main"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mMoreGiftTv"
+                    android:background="@color/color_white"
+                    android:orientation="vertical">
+
+                    <View style="@style/line_diliver"></View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/color_white">
+
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mUserHeadPortrait01Img"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/man"
+                            app:image_radius="50dp"
+                            app:image_type="round" />
+
+                        <TextView
+                            android:id="@+id/mGiveGiftUserName01Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/mUserHeadPortrait01Img"
+                            android:gravity="center_vertical"
+                            android:text="用户1号"
+                            android:textColor="@color/color_main_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/mGiveGiftDes01Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="赠送妙手回春"
+                            android:textColor="@color/color_main_black"
+                            android:textSize="15sp" />
+
+                        <View
+                            style="@style/line_diliver"
+                            android:layout_alignParentBottom="true"></View>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/color_white">
+
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mUserHeadPortrait02Img"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/man"
+                            app:image_radius="50dp"
+                            app:image_type="round" />
+
+                        <TextView
+                            android:id="@+id/mGiveGiftUserName02Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/mUserHeadPortrait02Img"
+                            android:gravity="center_vertical"
+                            android:text="用户1号"
+                            android:textColor="@color/color_main_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/mGiveGiftDes02Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="赠送妙手回春"
+                            android:textColor="@color/color_main_black"
+                            android:textSize="15sp" />
+
+                        <View
+                            style="@style/line_diliver"
+                            android:layout_alignParentBottom="true"></View>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/color_white">
+
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mUserHeadPortrait03Img"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/man"
+                            app:image_radius="50dp"
+                            app:image_type="round" />
+
+                        <TextView
+                            android:id="@+id/mGiveGiftUserName03Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/mUserHeadPortrait03Img"
+                            android:gravity="center_vertical"
+                            android:text="用户1号"
+                            android:textColor="@color/color_main_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/mGiveGiftDes03Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="赠送妙手回春"
+                            android:textColor="@color/color_main_black"
+                            android:textSize="15sp" />
+
+                        <View
+                            style="@style/line_diliver"
+                            android:layout_alignParentBottom="true"></View>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/color_white">
+
+                        <TextView
+                            android:id="@+id/mGiveGiftBtn"
+                            android:layout_width="300dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_main"
+                            android:gravity="center"
+                            android:text="送心意"
+                            android:textColor="@color/color_white"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mDoctorTalkLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="9dp"
+                android:background="@color/color_white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="医生说"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/mDoctorTalkMoreTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:text="更多"
+                    android:textColor="@color/color_main"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mDoctorTalkMoreTv"
+                    android:background="@color/color_white"
+                    android:orientation="vertical">
+
+                    <View style="@style/line_diliver"></View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="82dp"
+                        android:background="@color/color_white"
+                        android:orientation="vertical">
+
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mDoctorTalk01Img"
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="17dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_bg"
+                            app:image_radius="4dp"
+                            app:image_type="round" />
+
+                        <TextView
+                            android:id="@+id/mDoctorTalkTitle01Tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/mDoctorTalk01Img"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_toRightOf="@+id/mDoctorTalk01Img"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:lineSpacingMultiplier="0.9"
+                            android:maxLines="2"
+                            android:text=""
+                            android:textColor="@color/color_main_black"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/mDoctorTalk01Img"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginRight="17dp"
+                            android:layout_toRightOf="@+id/mDoctorTalk01Img">
+
+                            <TextView
+                                android:id="@+id/mDoctorTalkTime01Tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:lineSpacingMultiplier="0.9"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            style="@style/line_diliver"
+                            android:layout_alignParentBottom="true"></View>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="82dp"
+                        android:background="@color/color_white"
+                        android:orientation="vertical">
+
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mDoctorTalk02Img"
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="17dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_bg"
+                            app:image_radius="4dp"
+                            app:image_type="round" />
+
+                        <TextView
+                            android:id="@+id/mDoctorTalkTitle02Tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/mDoctorTalk02Img"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_toRightOf="@+id/mDoctorTalk02Img"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:lineSpacingMultiplier="0.9"
+                            android:maxLines="2"
+                            android:text=""
+                            android:textColor="@color/color_main_black"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/mDoctorTalk02Img"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginRight="17dp"
+                            android:layout_toRightOf="@+id/mDoctorTalk02Img">
+
+                            <TextView
+                                android:id="@+id/mDoctorTalkTime02Tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:lineSpacingMultiplier="0.9"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            style="@style/line_diliver"
+                            android:layout_alignParentBottom="true"></View>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="82dp"
+                        android:background="@color/color_white"
+                        android:orientation="vertical">
+
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mDoctorTalk03Img"
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="17dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_bg"
+                            app:image_radius="4dp"
+                            app:image_type="round" />
+
+                        <TextView
+                            android:id="@+id/mDoctorTalkTitle03Tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/mDoctorTalk03Img"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_toRightOf="@+id/mDoctorTalk03Img"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:lineSpacingMultiplier="0.9"
+                            android:maxLines="2"
+                            android:text=""
+                            android:textColor="@color/color_main_black"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/mDoctorTalk03Img"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginRight="17dp"
+                            android:layout_toRightOf="@+id/mDoctorTalk03Img">
+
+                            <TextView
+                                android:id="@+id/mDoctorTalkTime03Tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:lineSpacingMultiplier="0.9"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/color_main_gray_01"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            style="@style/line_diliver"
+                            android:layout_alignParentBottom="true"></View>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.bowen.commonlib.widget.CustomScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/mTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/color_main"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/mTitleBackImg"
+            android:layout_width="37dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/back" />
+
+        <com.bowen.commonlib.widget.CircleImageView
+            android:id="@+id/mTitleHeadPortraitImg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="33dp"
+            android:layout_toRightOf="@+id/mTitleBackImg"
+            android:src="@drawable/man"
+            app:image_radius="100dp"
+            app:image_type="round" />
+
+        <TextView
+            android:id="@+id/mTitleNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="33dp"
+            android:layout_toRightOf="@+id/mTitleHeadPortraitImg"
+            android:text=""
+            android:textColor="@color/color_white"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/mTitleShareImg"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/share_icon" />
+    </RelativeLayout>
+</RelativeLayout>
+
+
+

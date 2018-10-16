@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:layout_marginTop="15dp">
+
+    <com.bowen.commonlib.widget.CircleImageView
+        android:id="@+id/userImg"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_below="@+id/userCommentAll"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="11dp"
+        android:src="@drawable/man"
+        />
+    <TextView
+        android:id="@+id/doctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/userImg"
+        android:layout_below="@+id/userCommentAll"
+        android:layout_marginTop="21dp"
+        android:text="林西"
+        android:textColor="#253231"
+        android:textSize="17sp"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/commentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/userCommentAll"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="20dp"
+        android:text="06-22 12:00"
+        android:textColor="#a4a4a4"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        />
+    <TextView
+        android:id="@+id/userComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userImg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="25dp"
+        android:text="*********"
+        android:textColor="#253231"
+        android:textSize="17sp"
+        android:gravity="center_vertical"
+        />
+
+    <View
+        style="@style/line_diliver"
+        android:layout_below="@+id/userComment"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+</RelativeLayout>

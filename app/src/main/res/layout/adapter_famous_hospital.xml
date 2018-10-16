@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/hospitalImgLayout"
+            android:layout_width="match_parent"
+            android:layout_height="157dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/hospitalImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/news_defalult_bg"
+                android:transitionName="aaa" />
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/rlHospital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hospitalImgLayout"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/hospitalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:text="济风堂国医馆福田分店"
+                android:textColor="#253231"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/famousHospitalLogo"
+                android:visibility="gone"
+                android:layout_width="36dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:layout_toRightOf="@+id/hospitalName"
+                android:background="@drawable/button_famous_hospital"
+                android:gravity="center"
+                android:text="名馆"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/famousHospitalCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/hospital_call" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/hospitalAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlHospital"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="10dp"
+            android:text="广东省深圳市金田路4036号"
+            android:textColor="#a4a4a4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/hospitalDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hospitalAddress"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/hospital_distance"
+            android:gravity="center"
+            android:text="距您*米"
+            android:textColor="#253231"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/adapterFamousHospitalDivider"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_below="@+id/hospitalDistance"
+            android:background="@color/color_main_bg" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/recommendIcon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="end"
+        android:src="@drawable/icon_recommend" />
+
+</FrameLayout>

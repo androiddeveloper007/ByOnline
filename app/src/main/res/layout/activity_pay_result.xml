@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <ImageView
+        android:id="@+id/mPayResultImg"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="40.1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/pay_result_success"/>
+
+    <TextView
+        android:id="@+id/mPayResultTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="支付成功"
+        android:textSize="15sp"
+        android:textColor="@color/color_main_black"/>
+
+
+    <TextView
+        android:id="@+id/mImmediateConsultTv"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_main"
+        android:gravity="center"
+        android:text="立即咨询"
+        android:textColor="@color/color_white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/mCheckOrderTv"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_main_02"
+        android:gravity="center"
+        android:text="查看订单"
+        android:textColor="@color/color_main"
+        android:textSize="15sp" />
+</LinearLayout>
+
+
+

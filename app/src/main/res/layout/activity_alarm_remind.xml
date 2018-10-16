@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true"/>
+
+    <com.bowen.tcm.common.widget.ScrollRecyclerView
+        android:id="@+id/mSwipeRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+    </com.bowen.tcm.common.widget.ScrollRecyclerView>
+
+    <ViewStub
+        android:id="@+id/mNoAlarmRemindViewStup"
+        android:layout_marginTop="30dp"
+        android:layout="@layout/viewstub_no_alarm_remind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>
+
+
+

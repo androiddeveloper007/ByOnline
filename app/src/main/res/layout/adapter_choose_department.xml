@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="91dp"
+    android:layout_height="40dp"
+    >
+   <TextView
+       android:id="@+id/mDepartmentTv"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginTop="10dp"
+       android:layout_centerInParent="true"
+       android:background="@drawable/button_choose_department"
+       android:gravity="center"
+       android:singleLine="true"
+       android:ellipsize="end"
+       android:text="中医侯科"
+       android:textSize="12sp"
+       android:textColor="@color/split_line_gray"/>
+</RelativeLayout>

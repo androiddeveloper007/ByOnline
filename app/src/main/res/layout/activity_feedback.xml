@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_main_bg">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical"
+                android:background="@color/color_white">
+
+                <View style="@style/line_diliver"></View>
+
+                <EditText
+                    android:id="@+id/mContentEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:maxLength="500"
+                    android:gravity="left"
+                    android:background="@null"
+                    android:textSize="16.9sp"
+                    android:textColor="@color/color_main_black"
+                    android:hint="对我们的产品有什么不满意，吐槽吧!!"
+                    android:textColorHint="@color/color_main_gray" />
+
+                <TextView
+                    android:id="@+id/mContentCountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_main_gray"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0/500" />
+            </RelativeLayout>
+
+            <View style="@style/line_diliver"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="20dp"
+                    android:text="图片，可最多上传3张"
+                    android:textColor="#a4a4a4"
+                    android:textSize="15sp" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="18dp"/>
+            </LinearLayout>
+
+            <View style="@style/line_diliver" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginBottom="30dp"
+                android:text="我们会仔细阅读你的意见，不断改进产品"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/color_main_black"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
+
+
+

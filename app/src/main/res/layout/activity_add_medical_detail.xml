@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/mDiseaseNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="20dp"
+                    android:text="请上传病历、处方等照片"
+                    android:textColor="#a4a4a4"
+                    android:textSize="15sp" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="18dp"/>
+            </LinearLayout>
+
+            <View style="@style/line_diliver" />
+
+            <LinearLayout
+                android:id="@+id/mDiseaseTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <View style="@style/line_diliver"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:text="诊疗时间"
+                        android:textColor="#a4a4a4"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="17dp"
+                        android:text="第几次诊疗"
+                        android:textColor="#a4a4a4"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/mDiagnoseTimeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:text="2017-02-03"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/mDiagnoseCountTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="17dp"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:text="初诊"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View style="@style/line_diliver" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <View style="@style/line_diliver"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:text="诊疗效果"
+                        android:textColor="#a4a4a4"
+                        android:textSize="16.9sp" />
+
+                    <EditText
+                        android:id="@+id/mDiagnoseResultEdit"
+                        android:layout_width="212dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="17dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/color_main_black"
+                        android:textColorHint="@color/color_main_gray"
+                        android:gravity="right"
+                        android:background="@null"
+                        android:hint="请输入诊疗效果"
+                        android:inputType="textPhonetic"
+                         />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54.3dp">
+
+                    <View
+                        style="@style/line_diliver"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="17dp"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:text="诊疗诊所"
+                        android:textColor="#a4a4a4"
+                        android:textSize="16.9sp" />
+
+                    <EditText
+                        android:id="@+id/mDiagnoseHospitalEdit"
+                        android:layout_width="212dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="17dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/color_main_black"
+                        android:textColorHint="@color/color_main_gray"
+                        android:gravity="right"
+                        android:background="@null"
+                        android:hint="请输入诊疗诊所"
+                        android:inputType="textPhonetic"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54.3dp">
+
+                    <View
+                        style="@style/line_diliver"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="17dp"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:text="诊疗医生"
+                        android:textColor="#a4a4a4"
+                        android:textSize="16.9sp" />
+                    <EditText
+                        android:id="@+id/mDiagnoseDoctorEdit"
+                        android:layout_width="212dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="17dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/color_main_black"
+                        android:textColorHint="@color/color_main_gray"
+                        android:gravity="right"
+                        android:background="@null"
+                        android:hint="请输入诊疗医生"
+                        android:inputType="textPhonetic"
+                        />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/mLimitedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="54.3dp">
+
+                    <View
+                        style="@style/line_diliver"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="17dp"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:text="可见范围"
+                        android:textColor="#a4a4a4"
+                        android:textSize="16.9sp" />
+
+                    <TextView
+                        android:id="@+id/mLimitedTv"
+                        android:layout_width="212dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_marginRight="17dp"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:text="仅自己"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <View style="@style/line_diliver"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mNoRecordTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="35dp"
+                android:text="没有诊疗记录，跳过此步"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

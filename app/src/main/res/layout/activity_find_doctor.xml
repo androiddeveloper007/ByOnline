@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/mAddressLayout"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mAddressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="地区"
+                android:textColor="@color/select_find_doctor_top_titile"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/mAddressImg"
+                android:layout_width="19.8dp"
+                android:layout_height="19.8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8.1dp"
+                android:background="@drawable/selected_find_doctor_arrow_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mDepartmentLayout"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mDepartmentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="科室"
+                android:textColor="@color/select_find_doctor_top_titile"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/mDepartmentImg"
+                android:layout_width="19.8dp"
+                android:layout_height="19.8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8.1dp"
+                android:background="@drawable/selected_find_doctor_arrow_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mRankLayout"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mRankTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="职级"
+                android:textColor="@color/select_find_doctor_top_titile"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/mRankImg"
+                android:layout_width="19.8dp"
+                android:layout_height="19.8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8.1dp"
+                android:background="@drawable/selected_find_doctor_arrow_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mSortLayout"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mSortTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="排序"
+                android:textColor="@color/select_find_doctor_top_titile"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/mSortImg"
+                android:layout_width="19.8dp"
+                android:layout_height="19.8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8.1dp"
+                android:background="@drawable/selected_find_doctor_sort" />
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/line_diliver"></View>
+
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/mPtrFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_main_bg"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="259dp"
+    android:background="@color/color_00"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="359dp"
+        android:background="@color/color_white"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:textColor="@color/color_main_black"
+                android:text="选择家庭成员"/>
+
+            <TextView
+                android:id="@+id/mFinishTv"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/color_main"
+                android:text="完成"/>
+        </RelativeLayout>
+        <View style="@style/line_diliver"></View>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+</LinearLayout>

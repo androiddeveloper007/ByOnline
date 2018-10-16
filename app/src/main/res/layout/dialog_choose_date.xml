@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="275.7dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_13">
+
+    <RelativeLayout
+        android:background="@color/color_10"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/dialogChooseContentCancle"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="取消"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/font_2" />
+
+        <TextView
+            android:id="@+id/dialogChooseContentOk"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="确定"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/font_2" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.bowen.commonlib.widget.wheel.WheelView
+            android:id="@+id/yearWheelView"
+            android:layout_width="0px"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:gravity="right" />
+        <com.bowen.commonlib.widget.wheel.WheelView
+            android:id="@+id/monthWheelView"
+            android:layout_width="0px"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:gravity="right"/>
+        <com.bowen.commonlib.widget.wheel.WheelView
+            android:id="@+id/dayWheelView"
+            android:layout_width="0px"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:gravity="right" />
+    </LinearLayout>
+</LinearLayout>

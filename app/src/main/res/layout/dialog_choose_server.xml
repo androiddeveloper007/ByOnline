@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_00"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="300.3dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/corner_affirm_bg">
+
+        <LinearLayout
+            android:id="@+id/mTopLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20.3dp"
+                android:text="服务器选择"
+                android:textColor="@color/color_main_black"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/mTestServerRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="测"
+                        android:textColor="@color/color_black"
+                        android:textSize="15.6sp" />
+                    <RadioButton
+                        android:id="@+id/mFormalServerRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="正"
+                        android:textColor="@color/color_black"
+                        android:textSize="15.6sp" />
+
+                    <RadioButton
+                        android:id="@+id/mDevelopServerRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="开"
+                        android:textColor="@color/color_black"
+                        android:textSize="15.6sp" />
+
+                    <RadioButton
+                        android:id="@+id/mSelfServerRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="自"
+                        android:textColor="@color/color_black"
+                        android:textSize="15.6sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/mInputServerAddressEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="请输入自定义服务器"
+                android:textColor="@color/color_black"
+                android:textColorHint="@color/color_main_gray"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="53.3dp"
+            android:layout_below="@id/mTopLayout"
+            android:layout_marginTop="20dp">
+
+            <View
+                style="@style/line_diliver"
+                android:layout_alignParentTop="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mCancleTv"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="19.1sp" />
+
+                <View style="@style/line_diliver_h" />
+
+                <TextView
+                    android:id="@+id/mOkTv"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/color_main"
+                    android:textSize="19.1sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

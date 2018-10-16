@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true"/>
+
+    <LinearLayout
+        android:id="@+id/mUserInfoTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <com.bowen.commonlib.widget.CircleImageView
+            android:id="@+id/mHeadPortraitImg"
+            android:layout_width="83dp"
+            android:layout_height="83dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/add_img"
+            app:image_radius="50dp"
+            app:image_type="round" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="点击设置头像"
+            android:textColor="@color/color_main_gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <View style="@style/line_diliver"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:text="昵称"
+                android:textColor="#a4a4a4"
+                android:textSize="16.9sp" />
+
+            <com.bowen.commonlib.widget.InputEditText
+                android:id="@+id/mNickNameEdit"
+                style="@style/style_input_eidtext"
+                android:layout_marginRight="17dp"
+                android:hint="请输入家人昵称"
+                android:inputType="textPhonetic"
+                android:maxLength="18" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54.3dp">
+
+            <View
+                style="@style/line_diliver"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="17dp"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:text="性别"
+                android:textColor="#a4a4a4"
+                android:textSize="16.9sp" />
+
+            <TextView
+                android:id="@+id/familyMemberSexBoy"
+                android:layout_width="50dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/familyMemberSexGirl"
+                android:layout_marginRight="12dp"
+                android:gravity="center"
+                android:background="@drawable/btn_sex_selector"
+                android:text="男"
+                android:textColor="#a4a4a4"
+                android:textSize="16.9sp" />
+
+            <TextView
+                android:id="@+id/familyMemberSexGirl"
+                android:layout_width="50dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="17dp"
+                android:gravity="center"
+                android:background="@drawable/btn_sex_selector"
+                android:text="女"
+                android:textColor="#a4a4a4"
+                android:textSize="16.9sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectBirthdayLayout"
+            android:layout_width="match_parent"
+            android:layout_height="54.3dp">
+
+            <View
+                style="@style/line_diliver"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="17dp"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:text="出生年月"
+                android:textColor="#a4a4a4"
+                android:textSize="16.9sp" />
+
+            <TextView
+                android:id="@+id/birthdayTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="17dp"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:text="请输入出生年月"
+                android:textColor="@color/color_main_gray"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54.3dp">
+
+            <View
+                style="@style/line_diliver"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="17dp"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:text="关系"
+                android:textColor="#a4a4a4"
+                android:textSize="16.9sp" />
+
+            <TextView
+                android:id="@+id/mRelationShipTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="17dp"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:text="请选择关系"
+                android:textColor="@color/color_main_gray"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

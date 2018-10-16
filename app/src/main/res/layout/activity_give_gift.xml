@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:background="@color/color_white">
+        <com.bowen.commonlib.widget.CircleImageView
+            android:id="@+id/mHeadPortraitImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/man"
+            app:image_radius="50dp"
+            app:image_type="round" />
+        <TextView
+            android:id="@+id/mDoctorNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/mHeadPortraitImg"
+            android:gravity="center_horizontal"
+            android:text="江医生"
+            android:textSize="15sp"
+            android:textColor="@color/color_main_black"/>
+
+        <TextView
+            android:id="@+id/mDoctorDesTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/mDoctorNameTv"
+            android:gravity="center_horizontal"
+            android:text="济风堂国医馆  呼吸内科  主任医师"
+            android:textSize="12sp"
+            android:textColor="@color/color_main_gray"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:layout_marginTop="9dp">
+        
+        <ImageView
+            android:id="@+id/mGiftImg"
+            android:layout_width="330dp"
+            android:layout_height="148dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/gift_xhjs"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/mGiftPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mGiftImg"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="￥ 20.00"
+            android:textSize="14sp"
+            android:textColor="#ff5418"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_below="@+id/mGiftPriceTv"
+            ></android.support.v7.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/mGiveGiftBtn"
+            android:layout_width="300dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_main"
+            android:gravity="center"
+            android:text="送心意"
+            android:textColor="@color/color_white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+

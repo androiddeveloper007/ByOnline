@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/clockTopLayout"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/clock_alarm_top_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mRemindTimeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="115dp"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:text="18:45"
+            android:textColor="@color/color_main_black"
+            android:textSize="49sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="用药时间到啦"
+            android:textColor="@color/color_main_black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="297dp"
+        android:layout_height="109dp"
+        android:layout_below="@+id/clockTopLayout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/corner_clock_remind_content_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mRemindPersonTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_horizontal"
+            android:text="提醒自己"
+            android:textColor="@color/color_main_black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/mRemindMedicineDesTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="提醒自己"
+            android:textColor="@color/color_main_black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/mOkBtn"
+        android:layout_width="293dp"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/button_main"
+        android:gravity="center"
+        android:text="我知道了"
+        android:textColor="@color/color_white"
+        android:textSize="17sp" />
+
+</RelativeLayout>
+
+
+

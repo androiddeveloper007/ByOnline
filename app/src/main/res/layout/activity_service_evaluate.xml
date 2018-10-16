@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg">
+
+    <com.bowen.commonlib.widget.ActionTitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleViewVisible="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mTitleBar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mTitleBar"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="258dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:gravity="center_horizontal"
+                    android:text="请给医生本次服务打分"
+                    android:textColor="@color/color_main_gray_01"
+                    android:textSize="17sp" />
+
+                <RatingBar
+                    android:id="@+id/mServiceEvaluageRatingBar"
+                    style="@style/RatingBarBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="0.5" />
+
+                <View
+                    style="@style/line_diliver"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="18dp"></View>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="28dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="医生态度："
+                        android:textColor="@color/color_main_gray_01"
+                        android:textSize="17sp" />
+
+                    <RatingBar
+                        android:id="@+id/mDoctorAtitudeRatingBar"
+                        style="@style/RatingBarSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="28dp"
+                        android:numStars="5"
+                        android:rating="3"
+                        android:stepSize="0.5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="响应速度："
+                        android:textColor="@color/color_main_gray_01"
+                        android:textSize="17sp" />
+
+                    <RatingBar
+                        android:id="@+id/mDoctorReplyRateRatingBar"
+                        style="@style/RatingBarSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="28dp"
+                        android:numStars="5"
+                        android:rating="3"
+                        android:stepSize="0.5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="23dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="服务水平："
+                        android:textColor="@color/color_main_gray_01"
+                        android:textSize="17sp" />
+
+                    <RatingBar
+                        android:id="@+id/mServiceLevelRatingBar"
+                        style="@style/RatingBarSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="28dp"
+                        android:numStars="5"
+                        android:rating="3"
+                        android:stepSize="0.5" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="18dp"
+                    android:text="服务评价"
+                    android:textColor="@color/color_main_black"
+                    android:textSize="17sp" />
+
+                <View
+                    style="@style/line_diliver"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="18dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/mEvaluateContentEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="top|left"
+                    android:background="@color/color_white"
+                    android:hint="请输入评论文字，不少于10字"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:textColor="@color/color_main_black"
+                    android:textColorHint="@color/color_main_gray_01"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="#ffffff"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/mSubmitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_main"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/color_white"
+        android:textSize="17sp" />
+
+</RelativeLayout>
+
+
+

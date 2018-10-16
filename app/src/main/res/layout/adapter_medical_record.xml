@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bowen.tcm.common.widget.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_00"
+    android:layout_marginBottom="15dp"
+    android:paddingBottom="20dp"
+    app:sl_shadow_angle="90"
+    app:sl_shadow_color="@color/color_black_p15"
+    app:sl_shadow_distance="0dp"
+    app:sl_shadow_radius="2.5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_card_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            >
+            <TextView
+                android:id="@+id/mDateTv"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/corner_medical_record"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#fefefe"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mDiseaseNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:paddingRight="25dp"
+                android:text=""
+                android:textColor="#ff5418"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="病情描述："
+                android:textColor="#a4a4a4"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mDiseaseDesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=""
+                android:textColor="#253231"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mDiagnoseClinicLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="治疗诊所："
+                android:textColor="#a4a4a4"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mDiagnoseClinicTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=""
+                android:textColor="#253231"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mPhotoDetailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:text="病历缩图："
+                android:textColor="#a4a4a4"
+                android:textSize="14sp" />
+
+            <com.bowen.commonlib.widget.CircleImageView
+                android:id="@+id/mPhoto01Img"
+                android:layout_width="67dp"
+                android:layout_height="95dp"
+                android:scaleType="centerCrop"
+                app:image_radius="4dp"
+                app:image_type="round" />
+            <com.bowen.commonlib.widget.CircleImageView
+                android:id="@+id/mPhoto02Img"
+                android:layout_width="67dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                app:image_radius="4dp"
+                app:image_type="round" />
+            <com.bowen.commonlib.widget.CircleImageView
+                android:id="@+id/mPhoto03Img"
+                android:layout_width="67dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                app:image_radius="4dp"
+                app:image_type="round" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.bowen.tcm.common.widget.ShadowLayout>

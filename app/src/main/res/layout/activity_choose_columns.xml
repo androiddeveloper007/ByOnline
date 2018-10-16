@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mSkipTv"
+                android:gravity="center"
+                android:text="您更关心哪些内容呢？"
+                android:textColor="@color/color_main_black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:text="最多可以选择5个"
+                android:textColor="@color/color_main_gray"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="34dp"
+                android:layout_marginRight="34dp"
+                android:layout_marginTop="40dp"
+                android:overScrollMode="never"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/mOkBtn"
+                android:layout_width="254dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="84dp"
+                android:layout_marginBottom="84dp"
+                android:background="@drawable/button_main"
+                android:gravity="center"
+                android:text="确 定"
+                android:textColor="@color/color_white"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mSkipTv"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/button_main_gray"
+            android:gravity="center"
+            android:text="跳过"
+            android:textColor="@color/color_white"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
+
+
+

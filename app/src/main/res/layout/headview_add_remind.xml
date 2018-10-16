@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="17dp"
+        android:textSize="15sp"
+        android:textColor="#a4a4a4"
+        android:text="提醒设置"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <View style="@style/line_diliver"></View>
+
+        <RelativeLayout
+            android:id="@+id/mTimeLayout"
+            style="@style/layout_click"
+            android:layout_width="match_parent"
+            android:layout_height="54.3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:gravity="center_vertical"
+                android:text="用药时间"
+                android:textColor="#a4a4a4"
+                android:textSize="16.9sp" />
+
+            <TextView
+                android:id="@+id/mTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13.3dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/color_main_black"
+                android:textSize="16.9sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/mRepeatRateLayout"
+            style="@style/layout_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="54.3dp">
+
+            <View
+                style="@style/line_diliver"
+                android:layout_marginLeft="13.3dp"
+                android:layout_marginRight="13.3dp"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:gravity="center_vertical"
+                android:text="重复周期"
+                android:textColor="#a4a4a4"
+                android:textSize="16.9sp" />
+
+            <TextView
+                android:id="@+id/mRepeatPeriodTv"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13.3dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center_vertical|right"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text=""
+                android:textColor="@color/color_main_black"
+                android:textSize="16.9sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/mRemindWayLayout"
+            style="@style/layout_click"
+            android:layout_width="match_parent"
+            android:layout_height="54.3dp">
+
+
+            <View
+                style="@style/line_diliver"
+                android:layout_marginLeft="13.3dp"
+                android:layout_marginRight="13.3dp"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:gravity="center_vertical"
+                android:text="提醒方式"
+                android:textColor="#a4a4a4"
+                android:textSize="16.9sp" />
+
+            <TextView
+                android:id="@+id/mRemindWayTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13.3dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/color_main_black"
+                android:textSize="16.9sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/mRemindPersonLayout"
+            style="@style/layout_click"
+            android:layout_width="match_parent"
+            android:layout_height="54.3dp">
+
+
+            <View
+                style="@style/line_diliver"
+                android:layout_marginLeft="13.3dp"
+                android:layout_marginRight="13.3dp"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:gravity="center_vertical"
+                android:text="提醒谁"
+                android:textColor="#a4a4a4"
+                android:textSize="16.9sp" />
+
+            <TextView
+                android:id="@+id/mRemindPersonTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13.3dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/color_main_black"
+                android:textSize="16.9sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View style="@style/line_diliver"></View>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="17dp"
+        android:textSize="15sp"
+        android:textColor="#a4a4a4"
+        android:text="用药设置"/>
+
+
+
+</LinearLayout>
+
+
+

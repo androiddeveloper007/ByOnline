@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/color_main"
+        android:paddingTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/edit_rect_search_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="40dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="按姓名、疾病、症状、医院搜索医生"
+            android:textColor="#6bd7cd"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/edit_search1" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_main_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/mMineConsultLayout"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:layout_width="207dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/find_doctor_bg_01" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/consultIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/find_doctor_consult" />
+
+                    <TextView
+                        android:id="@+id/mMyConsultTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/consultIcon"
+                        android:text="我的咨询"
+                        android:textColor="@color/color_main_black" />
+
+                    <RelativeLayout
+                        android:id="@+id/mChatUserListLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:id="@+id/mArrowRightImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/arrow_right" />
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mUser01Img"
+                            android:layout_width="38dp"
+                            android:layout_height="39dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/mArrowRightImg"
+                            android:visibility="gone"
+                            app:image_radius="50dp"
+                            app:image_type="round"
+                            android:src="@drawable/man"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mUser02Img"
+                            android:layout_width="38dp"
+                            android:layout_height="39dp"
+                            app:image_radius="50dp"
+                            app:image_type="round"
+                            android:visibility="gone"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_toLeftOf="@+id/mArrowRightImg"
+                            android:src="@drawable/man"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mUser03Img"
+                            android:layout_width="38dp"
+                            android:layout_height="39dp"
+                            app:image_radius="50dp"
+                            app:image_type="round"
+                            android:visibility="gone"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="40dp"
+                            android:layout_toLeftOf="@+id/mArrowRightImg"
+                            android:src="@drawable/man"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mUser04Img"
+                            android:layout_width="38dp"
+                            android:layout_height="39dp"
+                            app:image_radius="50dp"
+                            app:image_type="round"
+                            android:visibility="gone"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="60dp"
+                            android:layout_toLeftOf="@+id/mArrowRightImg"
+                            android:src="@drawable/man"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <com.bowen.commonlib.widget.CircleImageView
+                            android:id="@+id/mUser05Img"
+                            android:layout_width="38dp"
+                            android:layout_height="39dp"
+                            app:image_radius="50dp"
+                            app:image_type="round"
+                            android:visibility="gone"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="80dp"
+                            android:layout_toLeftOf="@+id/mArrowRightImg"
+                            android:src="@drawable/man"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                        <ImageView
+                            android:id="@+id/mNoticeRedImg"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:visibility="gone"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@id/mArrowRightImg"
+                            android:background="@drawable/shape_circle_red"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/mFindDoctorLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="166dp"
+                        android:layout_height="95dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/find_doctor_bg_02" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp">
+
+                        <ImageView
+                            android:id="@+id/mFindDoctoIconImg"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/find_doctor_icon" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/mFindDoctoIconImg"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="7dp"
+                                android:drawableRight="@drawable/cicyle_more"
+                                android:gravity="center"
+                                android:text="找中医"
+                                android:textColor="@color/color_main_black"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="万名中医在线服务"
+                                android:textColor="@color/color_main_gray"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View style="@style/line_diliver"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/mClinicMapLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/mClinicMapIconImg"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="13.3dp"
+                            android:background="@drawable/find_doctor_location" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/mClinicMapIconImg"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="7dp"
+                                android:drawableRight="@drawable/cicyle_more"
+                                android:gravity="center"
+                                android:text="医馆地图"
+                                android:textColor="@color/color_main_black"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:text="看地图，找医馆"
+                                android:textColor="@color/color_main_gray"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View style="@style/line_diliver_h"></View>
+
+                    <RelativeLayout
+                        android:id="@+id/mFindClinicLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/mClinicIconImg"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="13.3dp"
+                            android:background="@drawable/find_doctor_clinic_icon" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/mClinicIconImg"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="7dp"
+                                android:drawableRight="@drawable/cicyle_more"
+                                android:gravity="center"
+                                android:text="发现名馆"
+                                android:textColor="@color/color_main_black"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:text="寻遍知名中医馆"
+                                android:textColor="@color/color_main_gray"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="207dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:gravity="center_vertical"
+                        android:text="按疾病找医生"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/mDiseaseMoreTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text="更多"
+                        android:textColor="@color/color_main_tips"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/line_diliver"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginRight="13.3dp"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginRight="13.3dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="110dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/find_doctor_bg_03" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/mDiseaseRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="113dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="201dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <TextView
+                        android:id="@+id/findServiceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:gravity="center_vertical"
+                        android:text="找服务"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/findServiceTv"
+                        android:gravity="center_vertical"
+                        android:text="想要的中医服务都在这里"
+                        android:textColor="@color/color_main_gray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/mFindServiceMoreTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text="更多"
+                        android:textColor="@color/color_main_tips"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/line_diliver"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginRight="13.3dp"></View>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mFindServiceRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginRight="13.3dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="207dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:gravity="center_vertical"
+                        android:text="按科室找中医"
+                        android:textColor="@color/color_main_black"
+                        android:textSize="17sp" />
+
+
+                    <TextView
+                        android:id="@+id/mDepartmentMoreTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:gravity="center_vertical"
+                        android:text="更多"
+                        android:textColor="@color/color_main_tips"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/line_diliver"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginRight="13.3dp"></View>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mDepartmentRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+

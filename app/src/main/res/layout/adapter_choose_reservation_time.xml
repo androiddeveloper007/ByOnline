@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mItemBg"
+    android:layout_width="100dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/button_remind_repeat"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/timeZone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:gravity="center"
+            android:text="减肥"
+            android:textSize="14sp"
+            android:textColor="@color/color_main_black"/>
+        <TextView
+            android:id="@+id/peopleAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:gravity="center"
+            android:text="(1/6)"
+            android:textSize="14sp"
+            android:textColor="@color/color_main_black"/>
+    </LinearLayout>
+</RelativeLayout>

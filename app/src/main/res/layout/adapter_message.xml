@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_main_bg"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp">
+
+            <TextView
+                android:id="@+id/mMsgTitileTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="用药提醒"
+                android:textColor="@color/color_main_black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/mTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/color_main_gray"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+        <View
+            style="@style/line_diliver"
+            android:layout_marginLeft="13.3dp"
+            android:layout_marginRight="13.3dp"></View>
+
+        <TextView
+            android:id="@+id/mMsgContent01Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="17dp"
+            android:text=""
+            android:textColor="@color/color_main_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mMsgContent02Tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:text=""
+            android:textColor="@color/color_main_black"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/mLineView"
+            style="@style/line_diliver"
+            android:layout_marginLeft="13.3dp"
+            android:layout_marginRight="13.3dp"
+           ></View>
+
+        <LinearLayout
+            android:id="@+id/mRemindFunctionLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="17dp">
+
+            <TextView
+                android:id="@+id/mIgnoreBtnTv"
+                android:layout_width="61dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/button_main_gray"
+                android:gravity="center"
+                android:text="忽 略"
+                android:textColor="@color/color_white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mFinishBtnTv"
+                android:layout_width="61dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_main"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="@color/color_white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mRemindBtnTv"
+                android:layout_width="61dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_main"
+                android:gravity="center"
+                android:text="提 醒"
+                android:textColor="@color/color_white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+
